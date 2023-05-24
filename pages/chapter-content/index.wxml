@@ -1,0 +1,12 @@
+<!--pages/chapter-content/index.wxml-->
+<view>
+    <view class="content">
+        <block wx:for="{{ chapterInfo[currentIndex].images}}" wx:key="{{item.id}}">
+            <image class="img" src="{{ item}}" mode="widthFix"></image>
+        </block>
+    </view>
+    <view class="operation">
+        <button class="previou" bindtap="handlePreviou">上一页</button>
+        <button class="next" bindtap="handleNext">下一页</button>
+    </view>
+</view>

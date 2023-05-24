@@ -1,0 +1,36 @@
+<!--pages/tab-bar-page/vedio-page/index.wxml-->
+<view class="video">
+    <tab-bar data="{{ categoryData}}" catch:tabClick="handleCategoryTab"></tab-bar>
+    <view class="menu" wx:if="{{ isShowMenu }}">
+        <view class="menu-item">
+            <block wx:for="{{ categoryConditionData}}">
+                <view catchtap="handleMenuItem" data-index="{{ index }}">
+                    <view class="item,{{ index == currentMenuIndex ? 'active' : ''}}">{{ item.condition_name }}</view>
+                </view>
+
+            </block>
+        </view>
+        <view class="sub-menu">
+            <block wx:for="{{ categoryConditionData[currentMenuIndex].children}}">
+                <view class="item, {{ index == currentSubMenuIndex ? 'active' : '' }}" catchtap="handleSubMenuItem" data-index="{{ index }}" data-id="{{ item.id }}">{{ item.subcondition_name }}</view>
+            </block>
+            <i></i>
+            <i></i>
+            <i></i>
+        </view>
+    </view>
+    <!-- <view bindtap="handleShowMenu" class="other"></view> -->
+    <view class="content">
+        <block wx:if="{{ videoList.length}}">
+            <block wx:for="{{ videoList }}">
+                <view class="item" bindtap="handleVideoItem" data-index="{{index}}">
+                    <image class="img" src="{{item.film_image}}"></image>
+                    <view class="title"> {{item.film_title}}</view>
+                </view>
+            </block>
+            <i></i>
+            <i></i>
+        </block>
+        <view wx:else>暂无数据</view>
+    </view>
+</view>

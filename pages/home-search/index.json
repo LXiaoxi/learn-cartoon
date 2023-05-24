@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "my-search": "/components/search/index",
+        "comic-item": "/components/comic-item/index",
+        "item-v1": "/components/item-v1/index"
+    }
+}

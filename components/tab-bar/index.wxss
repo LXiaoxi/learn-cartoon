@@ -1,0 +1,28 @@
+.tab {
+    display: flex;
+    /* margin-top: 30rpx; */
+    Position: sticky;
+    top: 0;
+    z-index: 9;
+}
+
+.tab-item {
+    padding: 0 20rpx;
+    height: 76rpx;
+    text-align: center;
+    /* margin: 0 1rpx; */
+    display: inline-block;
+}
+
+.scroll-view {
+    height: 80rpx;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    line-height: 80rpx;
+    background: #f0bd8a;
+    color: #fff;
+    font-size: 28rpx;
+    white-space: nowrap;
+
+}

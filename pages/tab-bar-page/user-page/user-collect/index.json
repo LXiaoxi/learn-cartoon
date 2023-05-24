@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "tab-bar": "/components/tab-bar/index",
+        "item-v2": "/components/item-v2/index"
+    },
+    "navigationBarTitleText": "我的收藏"
+}

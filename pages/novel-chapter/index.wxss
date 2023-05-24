@@ -1,0 +1,10 @@
+/* pages/novel-chapter/index.wxss */
+.novel-chapter {
+    padding: 10rpx;
+}
+
+.chapter {
+    width: 100vw;
+    height: 100vh;
+    display: inline-block;
+}

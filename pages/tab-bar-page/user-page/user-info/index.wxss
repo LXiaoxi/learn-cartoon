@@ -1,0 +1,25 @@
+/* pages/tab-bar-page/user-page/user-info/index.wxss */
+.user-info {
+    padding: 20rpx 10rpx;
+    box-sizing: border-box;
+}
+
+.layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100rpx;
+    margin-top: 20rpx;
+    border-bottom: 2rpx solid #eeeeee;
+}
+
+.avatar .img {
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 100rpx;
+    margin-bottom: 10rpx;
+}
+
+.input {
+    text-align: right;
+}

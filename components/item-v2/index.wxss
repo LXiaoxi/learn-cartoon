@@ -1,0 +1,47 @@
+/* components/item-v2/index.wxss */
+.item {
+    margin-bottom: 30rpx;
+    display: flex;
+    position: relative;
+}
+
+.img {
+    width: 220rpx;
+    height: 340rpx;
+    border-radius: 20rpx;
+}
+
+.rigth {
+    margin-left: 20rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rigth .title {
+    font-size: 40rpx;
+    color: #000;
+}
+
+.rigth .author {
+    width: 400rpx;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.rigth view {
+    margin: 14rpx 0;
+    color: #999999;
+}
+
+.is-collect {
+    position: absolute;
+    bottom: 30rpx;
+    right: 30rpx;
+}
+
+.is-collect .img {
+    width: 50rpx;
+    height: 50rpx;
+}

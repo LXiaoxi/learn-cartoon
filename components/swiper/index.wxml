@@ -1,0 +1,8 @@
+<!--components/swiper/index.wxml-->
+<view>
+    <swiper class="swiper" indicator-dots autoplay>
+        <swiper-item wx:for="{{ swiperData }}" bindtap="handleSwiperItem" data-id="{{ item.comic_id }}">
+            <image class="img" src="{{item.image_url}}" mode="widthFix"></image>
+        </swiper-item>
+    </swiper>
+</view>

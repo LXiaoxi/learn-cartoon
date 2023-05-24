@@ -1,0 +1,4 @@
+<!--pages/novel-chapter/index.wxml-->
+<view class="novel-chapter" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd">
+    <text class="chapter" user-select>{{ currentChapter}}</text>
+</view>

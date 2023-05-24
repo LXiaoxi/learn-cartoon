@@ -1,0 +1,5 @@
+{
+    "usingComponents": {
+        "comic-item": "/components/comic-item/index"
+    }
+}

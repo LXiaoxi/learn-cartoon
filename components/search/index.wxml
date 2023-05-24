@@ -1,0 +1,9 @@
+<!--components/search/index.wxml-->
+<view class="search">
+  <view class="search-left">
+    <input model:value="{{ searchValue }}" focus="{{focus}}" bindinput="handleSearchValue" class="search-input" type="text" placeholder="请输入" />
+  </view>
+  <view class="search-right" bindtap="handleSearchComfirm">
+    <image class="search-img" src="../../asset/search/search-icon.png"></image>
+  </view>
+</view>

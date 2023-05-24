@@ -1,0 +1,15 @@
+<!--pages/tab-bar-page/novel-page/index.wxml-->
+<view>
+    <tab-bar data="{{ categoryData }}" bind:tabClick="handleTabClick"></tab-bar>
+    <view class="content">
+        <block wx:for="{{ novelList }}">
+            <view class="item" bindtap="handleNovelItem" data-id="{{ item.novel_number}}" data-index="{{ index }}">
+                <image class="img" src="{{item.image_url}}"></image>
+                <view class="bottom">
+                    <view>{{ item.novel_name}}</view>
+                    <view> {{ item.latest_chapter}}</view>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>

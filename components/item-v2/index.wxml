@@ -1,0 +1,16 @@
+<!--components/item-v2/index.wxml-->
+<view class="item">
+    <image class="img" src="{{ item.image || item.film_image || item.image_url}}"></image>
+    <view class="rigth">
+        <view class="title">{{ item.comic_name || item.film_title || item.novel_name}}</view>
+        <view class="">{{ item.comic_title }}</view>
+        <view class="">{{ item.comic_update }}</view>
+        <view class="author">{{ item.comic_author || item.film_actor || item.author}}</view>
+        <view>{{ item.theme_name || item.area || item.latest_chapter}}</view>
+        <view>{{ item.popularity || item.year}}</view>
+    </view>
+    <view class="is-collect" bindtap="handleIsCollect" data-index="{{ index }}">
+        <image wx:if="{{ item.isCollect }}" class="img" src="../../asset/image/shoucang.png"></image>
+        <image wx:else class="img" src="../../asset/image/notshoucang.png"></image>
+    </view>
+</view>

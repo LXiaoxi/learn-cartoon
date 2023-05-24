@@ -1,0 +1,40 @@
+<!--pages/novel-detail/index.wxml-->
+<view class="novel-detail">
+    <view class="top">
+        <view class="left">
+            <view class="title">{{ item.novel_name }}</view>
+            <view class="author">作者:{{ item.author }}</view>
+            <view class="latest">{{ item.latest_chapter}}</view>
+            <view class="collect" bindtap="handleIsCollect" data-index="{{ index }}">
+                <image wx:if="{{ item.isCollect  }}" class="img" src="../../asset/image/shoucang.png"></image>
+                <image wx:else class="img" src="../../asset/image/notshoucang.png"></image>
+                <view>收藏</view>
+            </view>
+        </view>
+        <view class="right">
+            <image class="img" src="{{ item.image_url}}"></image>
+        </view>
+    </view>
+    <view class="bottom">
+        <view class="tab">
+            <block wx:for="{{['章节', '简介']}}" wx:key="{{item}}">
+                <view bindtap="handleDetailTab" data-index="{{index}}">
+                    <text class="item, {{ index == currentTabIndex ? 'active': ''}}">{{ item }}</text>
+                </view>
+            </block>
+        </view>
+        <view class="content">
+            <view wx:if="{{ currentTabIndex == 0}}">
+                <block wx:for="{{ chapterData }}" wx:key=" {{ item.id }}">
+                    <view class="chapter-item" bindtap="handleChapterItem" data-index="{{ index }}">
+                        <view>{{item.chapter_name}}</view>
+                        <view>></view>
+                    </view>
+                </block>
+            </view>
+            <view wx:if="{{ currentTabIndex == 1}}">
+                <text class="intro">简介: {{ item.intro}}</text>
+            </view>
+        </view>
+    </view>
+</view>

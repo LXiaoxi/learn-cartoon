@@ -1,0 +1,20 @@
+/* pages/chapter-content/index.wxss */
+.img {
+    width: 100vw;
+}
+
+.operation {
+    position: fixed;
+    right: 10rpx;
+    bottom: 20%;
+}
+
+.operation button {
+    background-color: rgba(240, 189, 138, .7);
+    color: #eeeeee;
+    margin-top: 20rpx;
+    width: 140rpx;
+    font-size: 28rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+}

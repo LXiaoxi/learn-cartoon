@@ -1,0 +1,35 @@
+<!--pages/tab-bar-page/comic-page/index.wxml-->
+<view>
+  <!-- 搜索框 -->
+  <my-search bindtap="hancleGoSearch" focus="{{false}}"></my-search>
+  <!-- 轮播图 -->
+  <my-swriper swiper-data="{{ comicCarousel }}"></my-swriper>
+  <view class="dj">
+    <area-header title="独家作品" imageUrl="dj"></area-header>
+    <module-v1 data="{{ comicExclusiveData }}"></module-v1>
+  </view>
+  <view class="ss">
+    <area-header title="上升最快" imageUrl="ss"></area-header>
+    <module-v2 data="{{ comicRiseData }}"></module-v2>
+  </view>
+  <view class="xz">
+    <area-header title="新作尝鲜" imageUrl="xz"></area-header>
+    <module-v1 data="{{ comicNewData }}"></module-v1>
+
+  </view>
+  <view class="tab">
+    <scroll-view scroll-x="true" class="scroll-view">
+      <block wx:for="{{categoryData}}">
+        <view class="tab-item" bindtap="handleTabItem" data-id="{{ item.id }}" data-name="{{ item.name }}">{{ item.name }}</view>
+      </block>
+    </scroll-view>
+  </view>
+  <view class="center" wx:if="{{ comicListData.length }}">
+    <block wx:for="{{ comicListData}}">
+      <comic-item class="item" item="{{item}}"></comic-item>
+    </block>
+  </view>
+  <view wx:else class="not-data">暂无数据...</view>
+  <view wx:if="{{!hasNextPage}}" class="loaded">已加载全部数据</view>
+
+</view>

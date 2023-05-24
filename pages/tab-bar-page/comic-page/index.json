@@ -1,0 +1,11 @@
+{
+    "usingComponents": {
+        "my-swriper": "/components/swiper/index",
+        "comic-item": "/components/comic-item/index",
+        "area-header": "/components/area-header/index",
+        "module-v1": "/components/module-v1/index",
+        "module-v2": "/components/module-v2/index",
+        "my-search": "/components/search/index"
+    },
+    "navigationBarTitleText": "漫画"
+}

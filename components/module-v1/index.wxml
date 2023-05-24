@@ -1,0 +1,19 @@
+<!--components/module/index.wxml-->
+<view class="module">
+    <view class="top">
+        <view class="top-img">
+            <image src="{{ data[0].image_url }}"></image>
+        </view>
+        <view class="title">{{ data[0].comic_title }}</view>
+        <view class="feature">{{ data[0].comic_feature }}</view>
+    </view>
+    <view class="content">
+        <block wx:for="{{ data }}">
+            <view wx:if="{{ index != 0 && index != data.length - 1}}" class="content-item">
+                <image class="img" src="{{ item.image_url }}"></image>
+                <view class="title">{{ item.comic_title }}</view>
+                <view class="feature">{{ item.comic_feature }}</view>
+            </view>
+        </block>
+    </view>
+</view>

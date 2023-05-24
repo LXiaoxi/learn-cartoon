@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.rigth {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20rpx;
+
+}
+
+.left .img {
+    width: 80rpx;
+    height: 80rpx;
+    padding: 20rpx;
+}
+
+.rigth {
+    color: #999999;
+    font-size: 28rpx;
+}

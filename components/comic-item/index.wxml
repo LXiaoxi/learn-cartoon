@@ -1,0 +1,7 @@
+<!--component/comic-item/index.wxml-->
+
+<view class="item" data-id="{{item.comic_id}}" bindtap="handleToDetail">
+    <image class="img" src="{{item.image}}"></image>
+    <view class="title"> {{item.comic_name}}</view>
+    <view class="update">{{item.comic_update}}</view>
+</view>

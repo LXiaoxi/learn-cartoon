@@ -1,0 +1,6 @@
+<view class="container">
+    <view class="logo">
+        <image class="img" src="/asset/image/OIP-C.jpg"></image>
+    </view>
+    <button class="wx-login-btn" bindtap="handleLogin">微信登录</button>
+</view>

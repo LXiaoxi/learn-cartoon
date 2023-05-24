@@ -1,0 +1,7 @@
+<!--pages/tab-bar-page/user-page/history-record/index.wxml-->
+
+<view class="history-record">
+    <block wx:for="{{ historyRecord }}">
+        <item-v2 item="{{item}}"></item-v2>
+    </block>
+</view>

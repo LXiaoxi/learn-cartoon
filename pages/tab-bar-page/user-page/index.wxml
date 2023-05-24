@@ -1,0 +1,14 @@
+<!--pages/tab-bar-page/user-page/index.wxml-->
+<view class="user-page">
+    <button wx:if="{{ !userInfo }}" class="loginBtn" bindtap="handleLogin">登录</button>
+    <view class="userInfo">
+        <image class="img" src="{{ userInfo.avatarUrl}}"></image>
+        {{ userInfo.nickName}}
+    </view>
+    <view class="content">
+        <!-- <view class="collect" bindtap="handleUserCollect">我的收藏</view> -->
+        <block wx:for="{{ menu }}">
+            <view class="item" bindtap="handleMenuItem" data-index="{{ index }}">{{ item.name}}</view>
+        </block>
+    </view>
+</view>

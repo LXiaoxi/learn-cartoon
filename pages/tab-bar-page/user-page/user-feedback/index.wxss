@@ -1,0 +1,47 @@
+/* pages/tab-bar-page/user-page/user-feedback/index.wxss */
+.user-feefback {
+    background-color: #eeeeee;
+    padding: 10rpx;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.problem {
+    display: flex;
+    flex-direction: column;
+}
+
+.problem-info {
+    padding: 10rpx 0;
+    box-sizing: border-box;
+}
+
+.text {
+    width: 100%;
+    border-radius: 20rpx;
+    background-color: #ffffff;
+    padding: 20rpx;
+    box-sizing: border-box;
+}
+
+.problem-image .img {
+    width: 200rpx;
+    height: 200rpx;
+    background-color: #ffffff;
+    margin-top: 30rpx;
+}
+
+.problem-image .img image {
+    width: 100%;
+    height: 100%;
+}
+
+.bottom .btn {
+    width: 300rpx;
+    background-color: #f0bd8a;
+    border-radius: 60rpx;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 200rpx;
+}

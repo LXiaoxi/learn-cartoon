@@ -1,0 +1,9 @@
+<view class="header">
+    <view class="left">
+        <image class="img" src="../../asset/home/ic_index_{{imageUrl}}.png"></image>
+        <view class="title">{{ title }}</view>
+    </view>
+    <view class="rigth">
+        <view>更多</view>
+    </view>
+</view>

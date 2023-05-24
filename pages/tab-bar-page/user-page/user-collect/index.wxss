@@ -1,0 +1,5 @@
+/* pages/tab-bar-page/user-page/user-collect/index.wxss */
+.content {
+    padding: 10rpx;
+    box-sizing: border-box;
+}

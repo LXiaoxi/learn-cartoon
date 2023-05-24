@@ -1,0 +1,9 @@
+<!--pages/tab-bar-page/user-page/user-collect/index.wxml-->
+<view class="collect">
+    <tab-bar data="{{ collectTab }}" bind:tabClick="handleTabItem"></tab-bar>
+    <view class="content">
+        <block wx:for="{{ collectItemData }}">
+            <item-v2 item="{{ item }}" currentIndex="{{ currentIndex }}"></item-v2>
+        </block>
+    </view>
+</view>

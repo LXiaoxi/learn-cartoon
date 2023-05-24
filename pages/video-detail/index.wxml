@@ -1,0 +1,44 @@
+<!--pages/video-detail/index.wxml-->
+<view class="video-detail">
+    <view class="video">
+        <video class="video-item" autoplay controls poster="{{ videoDetail.film_image }}" show-fullscreen-btn auto-pause-if-navigate src="{{ videoDetail.link[currentVideoIndex].play_sub_link}}"></video>
+    </view>
+    <view class="top">
+        <view class="left">
+
+            <view class="title">{{ videoDetail.film_title }}</view>
+            <view class="author">导演:{{ videoDetail.director }}</view>
+            <view class="area">地区: {{ videoDetail.area}}</view>
+        </view>
+        <view class="right">
+            <image class="img" src="{{ videoDetail.film_image}}"></image>
+            <view class="collect" bindtap="handleIsCollect">
+                <image src="../../asset/image/shoucang.png" wx:if="{{ videoDetail.isCollect }}"></image>
+                <image src="../../asset/image/notshoucang.png" wx:else></image>
+                <view>收藏</view>
+            </view>
+        </view>
+    </view>
+    <view class="bottom">
+        <view class="tab">
+            <block wx:for="{{['目录', '简介']}}" wx:key="{{item}}">
+                <view bindtap="handleDetailTab" data-index="{{index}}">
+                    <text class="item, {{ index == currentTabIndex ? 'active': ''}}">{{ item }}</text>
+                </view>
+            </block>
+        </view>
+        <view class="content">
+            <view wx:if="{{ currentTabIndex == 0}}">
+                <block wx:for="{{ videoDetail.link }}" wx:key=" {{ item.play_sub_link }}">
+                    <view class="chapter-item" bindtap="handleVideoItem" data-index="{{ index }}">
+                        <view>第{{ index + 1 }}集</view>
+                        <view>></view>
+                    </view>
+                </block>
+            </view>
+            <view wx:if="{{ currentTabIndex == 1}}">
+                <text class="intro">简介: {{ videoDetail.introduc}}</text>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,19 @@
+<!--pages/tab-bar-page/user-page/user-feedback/index.wxml-->
+<view class="user-feefback">
+    <view class="problem">
+        <view>问题和意见</view>
+        <view class="problem-info">
+            <textarea model:value="{{ problemValue }}" class="text" rows="10" placeholder="请填写"></textarea>
+        </view>
+    </view>
+    <view class="problem-image">
+        <view>图片</view>
+        <view class="img" bindtap="handleUpload">
+            <image wx:if="{{!imgUrl}}" src="../../../../asset/upload/upload-add.png"></image>
+            <image src="{{imgUrl}}"></image>
+        </view>
+    </view>
+    <view class="bottom">
+        <button class="btn" bindtap="handleSubmit">确定</button>
+    </view>
+</view>

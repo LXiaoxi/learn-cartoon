@@ -1,0 +1,22 @@
+.item {
+    font-size: 24rpx;
+}
+
+.item .img {
+    width: 220rpx;
+    height: 360rpx;
+    border-radius: 5%;
+}
+
+.item .title,
+.item .update {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 10rpx;
+    width: 200rpx;
+}
+
+.item .update {
+    color: #666666
+}

@@ -1,0 +1,56 @@
+{
+    "pages": [
+        "pages/tab-bar-page/comic-page/index",
+        "pages/tab-bar-page/novel-page/index",
+        "pages/tab-bar-page/video-page/index",
+        "pages/tab-bar-page/user-page/index",
+        "pages/comic-detail/index",
+        "pages/user/index",
+        "pages/chapter-content/index",
+        "pages/novel-detail/index",
+        "pages/novel-chapter/index",
+        "pages/video-detail/index",
+        "pages/tab-bar-page/user-page/user-collect/index",
+        "pages/tab-bar-page/user-page/user-feedback/index",
+        "pages/tab-bar-page/user-page/user-info/index",
+        "pages/tab-bar-page/user-page/history-record/index",
+        "pages/home-search/index",
+        "pages/custom-service/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "Weixin",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "selectedColor": "#f0bd8a",
+        "list": [
+            {
+                "text": "漫画",
+                "pagePath": "pages/tab-bar-page/comic-page/index",
+                "iconPath": "/asset/tabbar/dongman.png",
+                "selectedIconPath": "/asset/tabbar/dongman_active.png"
+            },
+            {
+                "text": "小说",
+                "pagePath": "pages/tab-bar-page/novel-page/index",
+                "iconPath": "/asset/tabbar/duxiaoshuo.png",
+                "selectedIconPath": "/asset/tabbar/duxiaoshuo_active.png"
+            },
+            {
+                "text": "视频",
+                "pagePath": "pages/tab-bar-page/video-page/index",
+                "iconPath": "/asset/tabbar/shouye_1.png",
+                "selectedIconPath": "/asset/tabbar/shouye_1_active.png"
+            },
+            {
+                "text": "我的",
+                "pagePath": "pages/tab-bar-page/user-page/index",
+                "iconPath": "/asset/tabbar/shouye.png",
+                "selectedIconPath": "/asset/tabbar/shouye_active.png"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json"
+}

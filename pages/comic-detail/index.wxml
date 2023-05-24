@@ -1,0 +1,65 @@
+<!--pages/comic/index.wxml-->
+
+<view>
+    <view class="top">
+        <image class="img" mode="aspectFill" src="{{comicDetail.image}}"></image>
+        <view class="position">
+            <view class="title">{{ comicDetail.comic_name}}</view>
+            <view class="author">{{ comicDetail.comic_author}}</view>
+            <view class="theme">{{ comicDetail.theme_name}}</view>
+        </view>
+        <text class="popularity">{{ comicDetail.popularity}}</text>
+    </view>
+    <view class="read">
+        <view class="collect" bindtap="handleIsCollect">
+            <image class="img" src="../../asset/image/shoucang.png" wx:if="{{ comicDetail.isCollect }}"></image>
+            <image class="img" src="../../asset/image/notshoucang.png" wx:else></image>
+            <view>{{comicDetail.collect}}</view>
+        </view>
+        <button class="read-btn" bindtap="handleStartRead">开始阅读</button>
+    </view>
+    <view class="detail-tab">
+        <view class="tab-container">
+            <block wx:for="{{['详情', '目录']}}" wx:key="{{item}}">
+                <view class="item" bindtap="handleDetailTab" data-index="{{index}}">
+                    <text class="{{ index == currentTabIndex ? 'active': ''}}">{{ item }}</text>
+                </view>
+            </block>
+        </view>
+        <view class="detail" wx:if="{{ currentTabIndex == 0}}">
+            <view class="chapter-detail">
+                <view class="intro">
+                    <text>{{ comicDetail.intro}}</text>
+                </view>
+            </view>
+            <view class="recommend">
+                <view class="title">主人,这有相关漫画为你推荐</view>
+                <scroll-view scroll-x class="scroll-content">
+                    <block wx:for="{{comicRecommend}}">
+                        <view class="item" bindtap="handleReCommend" data-index="{{ index }}">
+                            <!-- <comic-item class="comic-item" item="{{item}}"></comic-item> -->
+                            <image class="img" src="{{ item.image }}"></image>
+                            <view class="title">{{ item.comic_name}}</view>
+                            <view class="author">{{ item.comic_author}}</view>
+                        </view>
+                    </block>
+                </scroll-view>
+            </view>
+        </view>
+        <view class="directory" wx:if="{{ currentTabIndex == 1}}">
+            <view class="title">
+                <text class="serial">连载</text>
+                <text class="update"> 更新 第{{serialLength}}话</text>
+            </view>
+            <view class="content">
+                <block wx:for="{{ comicDirectory}}" wx:key="{{item.id}}">
+                    <view class="item" bindtap="handleChapterItem" data-index="{{index}}">
+                        <image class="img" src="{{item.images[1]}}" mode="center"></image>
+                        <view>{{item.chapter_name}}</view>
+                    </view>
+                </block>
+                <view wx:if="{{!hasNextPage}}" class="loaded">已加载全部数据</view>
+            </view>
+        </view>
+    </view>
+</view>

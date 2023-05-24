@@ -1,0 +1,31 @@
+<!--pages/home-search/index.wxml-->
+<view class="search-page">
+    <my-search bind:searchClick="handleSearch" search-value="{{searchDto.keyWord}}"></my-search>
+    <view class="content">
+        <view class="search-record">
+            <view class="top" wx:if="{{ searchRecord.length > 0 }}">
+                <view class="title">搜索记录</view>
+                <view class="delete" bindtap="handleDeleteRecord">删除</view>
+            </view>
+            <view class="search-content">
+                <block wx:for="{{ searchRecord }}">
+                    <view class="record-item" bindtap="handleSearchRecord" data-value="{{item}}">
+                        {{item}}
+                    </view>
+                </block>
+                <i></i>
+                <i></i>
+                <i></i>
+            </view>
+        </view>
+        <view wx:if="{{ isShow }}">
+            <view class="search-result" wx:if="{{ searchData.length >= 0 }}">搜索结果:</view>
+            <block wx:for="{{ searchData }}">
+                <item-v1 item="{{item}}" class="item"></item-v1>
+            </block>
+            <view wx:if="{{ searchData.length == 0}}" class="no-data">
+                暂无数据...
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,35 @@
+/* components/search/index.wxss */
+/* 搜索框 */
+.search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10rpx 20rpx;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+.search-left {
+    flex: 1;
+    background-color: #eeeeee;
+    border-radius: 30rpx;
+}
+
+.search-left .search-input {
+    display: inline-block;
+    width: 100%;
+    padding: 10rpx 20rpx;
+    vertical-align: middle;
+}
+
+.search-right {
+    margin-left: 10rpx;
+    padding: 10rpx;
+}
+
+.search-right .search-img {
+    width: 48rpx;
+    height: 48rpx;
+    vertical-align: middle;
+
+}

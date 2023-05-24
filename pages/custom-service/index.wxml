@@ -1,0 +1,47 @@
+<view class="top">
+    <scroll-view class="chat-container" scroll-into-view="{{toView}}" show-scrollbar="{{false}}" enhanced="{{true}}" style="height: {{scrollHeight}}px" scroll-y>
+        <view class="test" id="item12">
+            <block wx:for="{{msgRecord}}" wx:key="{{item.id}}">
+                <!-- 右边 -->
+                <view wx:if="{{ item.from_id == user_id}}" class="right" id="item{{index}}">
+                    <view class="info">
+                        <view class="nickname">{{ item.nickName }}</view>
+                        <view class="msg">
+                            <text user-select>{{item.msg}}</text>
+                        </view>
+                    </view>
+                    <view>
+                        <image class="img" src="{{item.image_url}}"></image>
+                    </view>
+                </view>
+                <!-- 左边 -->
+                <view wx:else class="left" id="item{{index}}">
+                    <view>
+                        <image class="img" src="{{item.image_url}}"></image>
+                    </view>
+                    <view class="info">
+                        <view class="nickname">{{ item.nickName }}</view>
+                        <view class="msg">
+                            <text user-select>{{item.msg}}</text>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </scroll-view>
+</view>
+<view class="bottom" style="bottom: {{ keyHeight }}px; ">
+    <view class="bottom-img" bindtap="handleToggle">
+        <image class="img img-left" mode="widthFix" src="/asset/image/{{isYuyin ? 'yuyin': 'jianpan'}}.png"></image>
+    </view>
+    <textarea wx:if="{{isYuyin}}" class="send-value" maxlength="-1" auto-height="{{true}}" model:value="{{msgValue}}" adjust-position="{{ false }}" confirm-type="send" confirm-hold="{{true}}" bindconfirm="handleConfirm" bindfocus="handleFocus" bindblur="handleBlur"></textarea>
+    <view wx:else class="hold-speak">
+        <text>按住说话</text>
+    </view>
+    <page-container class="page-container" show="{{true}}" overlay="{{false}}">
+
+    </page-container>
+    <view class="bottom-img">
+        <image class="img img-rigth" mode="widthFix" src="/asset/image/icon_tianjia.png"></image>
+    </view>
+</view>

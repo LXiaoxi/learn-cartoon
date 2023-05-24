@@ -1,0 +1,37 @@
+/* pages/home-search/index.wxss */
+.top {
+    margin-bottom: 30rpx;
+    display: flex;
+    padding: 20rpx;
+    box-sizing: border-box;
+}
+
+.img {
+    width: 220rpx;
+    height: 340rpx;
+    border-radius: 20rpx;
+}
+
+.rigth {
+    margin-left: 20rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rigth .title {
+    color: #000000;
+    font-size: 34rpx;
+}
+
+.rigth .name {
+    font-size: 40rpx;
+    color: #000;
+}
+
+
+
+.rigth view {
+    margin: 14rpx 0;
+    color: #999999;
+}

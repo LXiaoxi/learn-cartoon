@@ -1,0 +1,8 @@
+<!--components/tab-bar/index.wxml-->
+<view class="tab">
+    <scroll-view scroll-x="true" class="scroll-view">
+        <block wx:for="{{data}}">
+            <view class="tab-item" bindtap="handleTabItem" data-id="{{ item.id }}" data-name="{{ item.name }}">{{ item.name }}</view>
+        </block>
+    </scroll-view>
+</view>

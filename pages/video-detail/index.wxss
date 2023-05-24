@@ -1,0 +1,102 @@
+/* pages/novel-detail/index.wxss */
+.video-detail {
+    padding: 20rpx;
+}
+
+.video {
+    height: 420rpx;
+}
+
+.video .video-item {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.top {
+    display: flex;
+}
+
+.top .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 34rpx;
+    flex: 1;
+}
+
+
+
+.top .right .collect image {
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.top .right {
+    width: 200rpx;
+    height: 280rpx;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.top .right .collect {
+    display: flex;
+    margin-top: 16rpx
+}
+
+.top .right .img {
+    width: 150rpx;
+    height: 180rpx;
+}
+
+.top .left .title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 400rpx;
+}
+
+.top .left view:first-child {
+    margin-top: 50rpx;
+}
+
+.top .left view {
+    margin: 16rpx 0;
+}
+
+.top .left .author {
+    color: #999999;
+}
+
+.bottom .tab {
+    display: flex;
+    margin-bottom: 16rpx;
+    position: sticky;
+    top: 450rpx;
+    background-color: #fff;
+}
+
+.bottom .tab .item {
+    padding: 20rpx;
+    margin-right: 20rpx;
+    margin-top: 20rpx;
+    display: inline-block;
+}
+
+.active {
+    border-bottom: 4rpx solid #f0bd8a;
+
+}
+
+.chapter-item {
+    height: 100rpx;
+    line-height: 100rpx;
+    border-bottom: 1px solid #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

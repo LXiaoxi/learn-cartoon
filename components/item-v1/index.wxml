@@ -1,0 +1,10 @@
+<view class="top" bindtap="handleItemClick" data-id="{{ item.comic_id}}">
+    <image class="img" src="{{ item.image}}"></image>
+    <view class="rigth">
+        <view class="name">{{ item.comic_name}}</view>
+        <view class="title">{{ item.comic_title}}</view>
+        <view>{{ item.comic_count }}</view>
+        <view>更新:{{ item.comic_update }}</view>
+        <view>周点击: 6.3万</view>
+    </view>
+</view>

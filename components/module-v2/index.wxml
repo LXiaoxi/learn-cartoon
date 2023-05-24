@@ -1,0 +1,22 @@
+<!--components/module-v2/index.wxml-->
+<view class="module-v2">
+    <block wx:for="{{ data }}">
+        <view wx:if="{{ index < 2}}" class="top">
+            <image class="img" src="{{ item.image_url}}"></image>
+            <view class="rigth">
+                <view class="title">{{ item.comic_title}}</view>
+                <view>{{ item.comic_feature }}</view>
+                <view>{{ item.comic_tag }}</view>
+                <view>周点击: 6.3万</view>
+            </view>
+        </view>
+
+        <view wx:else class="bottom">
+            <image class="img" src="{{ item.image_url}}"></image>
+            <view class="bottom-info">
+                <view class="title">{{ item.comic_title}}</view>
+                <view>{{ item.comic_feature }}</view>
+            </view>
+        </view>
+    </block>
+</view>
